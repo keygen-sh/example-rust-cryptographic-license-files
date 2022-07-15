@@ -1,0 +1,16 @@
+[package]
+name = "example-rust-cryptographic-license-files"
+version = "0.1.0"
+authors = ["Zeke Gabrielse <zeke@keygen.sh>"]
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0"
+serde_json = "1.0"
+ed25519-dalek = { version = "1.0", features = ["serde"] }
+aes-gcm = "0.9"
+sha2 = "0.10"
+base64 = "0.13"
+hex = "0.4"
