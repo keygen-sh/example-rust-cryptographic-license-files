@@ -2,7 +2,7 @@ use ed25519_dalek::{PUBLIC_KEY_LENGTH, SIGNATURE_LENGTH, PublicKey, Verifier};
 use aes_gcm::{Aes256Gcm, Key, Nonce, Tag};
 use aes_gcm::aead::{Aead, NewAead};
 use sha2::{Sha256, Digest};
-use serde::{Deserialize};
+use serde::{Deserialize, Serialize};
 use std::error::{Error};
 use hex::FromHex;
 use std::str;
@@ -11,7 +11,7 @@ const KEYGEN_LICENSE_FILE: &str = "-----BEGIN LICENSE FILE-----\neyJlbmMiOiJ3NHF
 const KEYGEN_LICENSE_KEY: &str = "988214-879010-F1185E-B37E91-E53AF5-V3";
 const KEYGEN_PUBLIC_KEY: &str = "e8601e48b69383ba520245fd07971e983d06d22c4257cfd82304601479cee788";
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Serialize, Debug)]
 struct LicenseFile<'a> {
   enc: &'a str,
   sig: &'a str,
@@ -63,7 +63,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
   // Print license file.
   println!("license file was successfully verified!");
-  println!("  > {:?}", lic);
+  println!("  > {}", serde_json::to_string_pretty(&lic).unwrap());
 
   // Hash the license key to obtain decryption key.
   let mut sha = Sha256::new();
@@ -96,8 +96,10 @@ fn main() -> Result<(), Box<dyn Error>> {
   };
 
   // Print decrypted data.
+  let obj: serde_json::Value = serde_json::from_str(&plaintext).unwrap();
+
   println!("license file was successfully decrypted!");
-  println!("  > {}", plaintext);
+  println!("  > {}", serde_json::to_string_pretty(&obj).unwrap());
 
   Ok(())
 }
