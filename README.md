@@ -13,10 +13,14 @@ Install dependencies with [`cargo`](https://doc.rust-lang.org/cargo/):
 cargo build
 ```
 
-Then run the program:
+Then run the example program, where `-p` is the path to a license file,
+`-k` is your Ed25519 public key, and `-l` is a license key. Feel free
+to use these example values:
 
 ```bash
-cargo run
+cargo run -- -p examples/license.lic \
+  -k "e8601e48b69383ba520245fd07971e983d06d22c4257cfd82304601479cee788" \
+  -l "988214-879010-F1185E-B37E91-E53AF5-V3"
 ```
 
 You should see output indicating that the license file is valid, with its
@@ -45,8 +49,8 @@ license file was successfully decrypted!
         ...
       ],
       "meta": {
-        "expiry": "2023-08-08T16:37:55.036Z",
         "issued": "2022-08-08T16:37:55.036Z",
+        "expiry": "2023-08-08T16:37:55.036Z",
         "ttl": 31556952
       }
     }

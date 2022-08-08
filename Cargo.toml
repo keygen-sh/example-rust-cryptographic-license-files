@@ -14,3 +14,4 @@ aes-gcm = "0.9"
 sha2 = "0.10"
 base64 = "0.13"
 hex = "0.4"
+clap = { version = "3.2.16", features = ["derive"] }
