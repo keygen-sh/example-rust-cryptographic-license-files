@@ -1,7 +1,7 @@
 # Example Rust Cryptographic License Files
 
 This is an example of how to verify and decrypt [cryptographic license files](https://keygen.sh/docs/api/cryptography/#cryptographic-lic)
-in Rust, using Ed25519 signing and AES-256-GCM encryption.
+in Rust, using Ed25519 signature verification and AES-256-GCM encryption.
 
 This example verifies the `aes-256-gcm+ed25519` algorithm.
 
