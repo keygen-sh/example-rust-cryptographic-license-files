@@ -25,8 +25,8 @@ decrypted dataset:
 ```
 license file was successfully verified!
   > {
-      "enc": "w4qdbuqLaGdO98bdSS2shu4xX+NwR1uRIWy5...zNZ7ZA0D3mo=.wpu1TdcHVno8zgPI./VzxTIA8sFq0Bix0ljdfxw==",
-      "sig": "gCe0gS67opMc9x2qiuZF2o742vd/bHLEADBpr4Bq/NwEGY9wHrEKSvT6Oaiv7cW7LfTUmECNHRjX+X8eQMxMCA==",
+      "enc": "WJduvnfelNL8XxZPo6CJ4RACcIEpGAasx...uY317MosowW5zAbD4w==.hDyId1HHbc5XxF9U.gkMKTqOZDz35+ehHOkO+wQ==",
+      "sig": "oSePC/4ADN6KV0FWs0qMEn7THgrAai6011SQqwXMSQsu8OA5eEyAaz0xjes14nJL6gv4zig5VYTfYYTCbRhWBQ==",
       "alg": "aes-256-gcm+ed25519"
     }
 license file was successfully decrypted!
@@ -45,9 +45,9 @@ license file was successfully decrypted!
         ...
       ],
       "meta": {
-        "expiry": null,
-        "issued": "2022-08-08T15:51:17.178Z",
-        "ttl": null
+        "expiry": "2023-08-08T16:37:55.036Z",
+        "issued": "2022-08-08T16:37:55.036Z",
+        "ttl": 31556952
       }
     }
 ```
